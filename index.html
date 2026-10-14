@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fffaf1" />
+    <meta
+      name="description"
+      content="Pick a little quiz, play along, and make your own with Lystte Quiz."
+    />
+    <title>Lystte Quiz — little quizzes, just for fun</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="brand" href="./" aria-label="Lystte Quiz home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="m7 12 3.2 3.2L18 7.5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M12 2.8 14.1 4l2.4-.2 1.1 2.1 2 1.2-.2 2.4 1.2 2.1-1.2 2.1.2 2.4-2 1.2-1.1 2.1-2.4-.2-2.1 1.2-2.1-1.2-2.4.2-1.2-2.1-2-1.2.2-2.4L3.5 12l1.2-2.1-.2-2.4 2-1.2 1.2-2.1 2.4.2L12 2.8Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" />
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <strong>Lystte <span>Quiz</span></strong>
+            <small>A little quiz club</small>
+          </span>
+        </a>
+        <nav class="main-nav" aria-label="Main navigation">
+          <button class="nav-link is-active" type="button" data-action="home">Quizzes</button>
+          <button class="nav-link" type="button" data-action="new-quiz">Make a quiz <span aria-hidden="true">＋</span></button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="page" data-page="browse" aria-labelledby="welcome-title">
+        <div class="hero">
+          <div class="hero-copy">
+            <span class="hero-sticker"><span aria-hidden="true">✳</span> A small break for your brain</span>
+            <h1 class="display" id="welcome-title">A little quiz, <span class="scribble">just for fun.</span></h1>
+            <p class="hero-intro">Pick a topic, trust your first guess, and see what you know. Or make a quiz of your own and share the fun.</p>
+            <div class="hero-actions">
+              <button class="button button-coral" type="button" data-action="surprise">Surprise me <span aria-hidden="true">↗</span></button>
+              <span class="quiz-count"><strong id="quiz-count">0</strong> little quizzes to try</span>
+            </div>
+          </div>
+          <div class="hero-doodle" aria-hidden="true">
+            <div class="question-scrap">
+              <span>Quick question</span>
+              <strong>Ready, set,<br />curious!</strong>
+              <i></i>
+            </div>
+            <div class="circle-doodle"></div>
+            <div class="sun-doodle">?</div>
+          </div>
+        </div>
+
+        <section aria-labelledby="shelf-title">
+          <div class="shelf-heading">
+            <div>
+              <p class="eyebrow coral-text">Pick your next little adventure</p>
+              <h2 class="display" id="shelf-title">The quiz shelf</h2>
+            </div>
+            <label class="search-field">
+              <span class="visually-hidden">Search quizzes</span>
+              <input id="quiz-search" type="search" placeholder="Find a topic…" autocomplete="off" />
+            </label>
+          </div>
+          <div class="category-list" aria-label="Filter quizzes" role="group"></div>
+          <div class="quiz-grid" id="quiz-grid" aria-live="polite"></div>
+        </section>
+
+        <aside class="make-callout">
+          <span class="callout-mark" aria-hidden="true">✎</span>
+          <div>
+            <h3 class="display">Got a question?</h3>
+            <p>Start with a blank quiz and make it yours.</p>
+          </div>
+          <button class="button button-outline" type="button" data-action="new-quiz">Make a quiz <span aria-hidden="true">→</span></button>
+        </aside>
+      </section>
+
+      <section class="page is-hidden" data-page="play" aria-labelledby="play-title">
+        <button class="back-link" type="button" data-action="home"><span aria-hidden="true">←</span> Back to the shelf</button>
+        <div class="play-layout">
+          <div class="play-card" id="play-card" aria-live="polite">
+            <h1 class="display" id="play-title">Choose a quiz to begin</h1>
+          </div>
+          <aside class="play-aside" aria-label="Quiz notes">
+            <div class="aside-note note-yellow">
+              <span class="eyebrow">No pressure</span>
+              <p>Go with your gut. You can always try again.</p>
+            </div>
+            <div class="aside-note note-green">
+              <span class="eyebrow">Tiny tip</span>
+              <p>Questions can be shuffled whenever you like.</p>
+            </div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="page is-hidden" data-page="edit" aria-labelledby="editor-title">
+        <button class="back-link" type="button" data-action="home"><span aria-hidden="true">←</span> Back to the shelf</button>
+        <div class="editor-heading">
+          <div>
+            <p class="eyebrow coral-text">Make it yours</p>
+            <h1 class="display" id="editor-title">Your little quiz</h1>
+            <p>Write a question, add a few answers, and mark the right one.</p>
+          </div>
+          <button class="button button-teal" type="button" data-action="save-quiz">Save quiz <span aria-hidden="true">✓</span></button>
+        </div>
+
+        <div class="editor-details">
+          <label class="field-label title-field">
+            <span class="eyebrow">Quiz title</span>
+            <input id="edit-title-input" type="text" maxlength="80" placeholder="A name for your quiz" />
+          </label>
+          <label class="field-label">
+            <span class="eyebrow">Topic</span>
+            <select id="edit-category">
+              <option>Everyday</option>
+              <option>Curious minds</option>
+              <option>Wordplay</option>
+              <option>Outdoors</option>
+              <option>Just for fun</option>
+            </select>
+          </label>
+          <label class="field-label description-field">
+            <span class="eyebrow">A little description</span>
+            <textarea id="edit-description" rows="2" maxlength="180" placeholder="What makes this quiz fun?"></textarea>
+          </label>
+        </div>
+
+        <div class="question-heading">
+          <div>
+            <h2 class="display">Questions <span class="count-pill" id="question-count">0</span></h2>
+            <p>Four answer choices per question; tap a letter to choose the right answer.</p>
+          </div>
+        </div>
+        <p class="save-notice" id="save-notice" role="status" aria-live="polite"></p>
+        <div class="question-list" id="question-list"></div>
+        <button class="add-question" type="button" data-action="add-question"><span aria-hidden="true">＋</span> Add another question</button>
+        <div class="editor-bottom">
+          <p>Your quiz has <strong id="bottom-question-count">0 questions</strong>.</p>
+          <button class="button button-teal" type="button" data-action="save-quiz">Save quiz <span aria-hidden="true">✓</span></button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <span class="display">Lystte Quiz</span>
+        <span>A little curiosity goes a long way.</span>
+      </div>
+    </footer>
+
+    <noscript><p class="noscript-note">Please enable JavaScript to play and edit quizzes.</p></noscript>
+  </body>
+</html>
