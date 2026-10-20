@@ -1,0 +1,47 @@
+{
+  "name": "lystte-quiz",
+  "version": "1.0.0",
+  "description": "A small, colorful quiz site with ready-to-play quizzes and an editor for making them your own.",
+  "main": "app.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "@clerk/express": "^2.1.81",
+    "@clerk/react": "^6.18.0",
+    "@clerk/shared": "^4.41.0",
+    "@clerk/themes": "^2.4.57",
+    "cors": "^2.8.6",
+    "express": "^5.3.0",
+    "http-proxy-middleware": "^4.2.0",
+    "prettier": "^3.9.4",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "typescript": "^5.9.3",
+    "wouter": "^3.13.0"
+  },
+  "scripts": {
+    "dev": "vite --host 0.0.0.0 --port 5000",
+    "build": "vite build",
+    "start": "tsx server/index.ts",
+    "test": "node --test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lysetteh1579/Quiz-WebSite.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Lysetteh1579/Quiz-WebSite/issues"
+  },
+  "homepage": "https://github.com/Lysetteh1579/Quiz-WebSite#readme",
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@vitejs/plugin-react": "^6.1.2",
+    "tsx": "^4.23.15",
+    "vite": "^8.3.4"
+  }
+}

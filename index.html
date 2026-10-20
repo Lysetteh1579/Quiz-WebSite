@@ -9,8 +9,10 @@
       content="Pick a little quiz, play along, and make your own with Lystte Quiz."
     />
     <title>Lystte Quiz — little quizzes, just for fun</title>
+    <link rel="icon" type="image/svg+xml" href="/logo.svg" />
     <link rel="stylesheet" href="styles.css" />
-    <script src="app.js" defer></script>
+    <script type="module" src="/app.js"></script>
+    <script type="module" src="/src/main.jsx"></script>
   </head>
   <body>
     <header class="site-header">
@@ -30,6 +32,7 @@
         <nav class="main-nav" aria-label="Main navigation">
           <button class="nav-link is-active" type="button" data-action="home">Quizzes</button>
           <button class="nav-link" type="button" data-action="new-quiz">Make a quiz <span aria-hidden="true">＋</span></button>
+          <div id="auth-nav-root"></div>
         </nav>
       </div>
     </header>
@@ -156,6 +159,7 @@
       </div>
     </footer>
 
+    <div id="auth-root"></div>
     <noscript><p class="noscript-note">Please enable JavaScript to play and edit quizzes.</p></noscript>
   </body>
 </html>
