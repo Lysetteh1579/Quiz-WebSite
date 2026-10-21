@@ -1,0 +1,1 @@
+- [Quiz content preservation](quiz-content-preservation.md) — preserve all user-provided question and answer content during visual redesigns.

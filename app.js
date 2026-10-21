@@ -172,8 +172,8 @@ function renderBrowse() {
         <div class="card-actions">
           <button class="icon-button" data-action="edit-existing" data-quiz-id="${escapeHTML(quiz.id)}"
             aria-label="Edit ${escapeHTML(quiz.title)}">${icon("edit")}</button>
-          <button class="icon-button" data-action="play-quiz" data-quiz-id="${escapeHTML(quiz.id)}"
-            aria-label="Play ${escapeHTML(quiz.title)}">${icon("play")}</button>
+          <button class="icon-button play-button" data-action="play-quiz" data-quiz-id="${escapeHTML(quiz.id)}"
+            aria-label="Play ${escapeHTML(quiz.title)}">${icon("play")}<span>Play</span></button>
         </div>
       </div>
     </article>

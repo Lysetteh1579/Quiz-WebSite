@@ -1,5 +1,5 @@
 body.auth-route {
-  background: #fffaf1;
+  background: #f4f6ff;
 }
 
 body.auth-route .site-header,
@@ -21,7 +21,7 @@ body.auth-route .site-footer {
 .account-greeting {
   max-width: 145px;
   overflow: hidden;
-  color: #68675d;
+  color: #66708f;
   font-size: 13px;
   font-weight: 600;
   text-overflow: ellipsis;
@@ -41,9 +41,9 @@ body.auth-route .site-footer {
   overflow: hidden;
   padding: 48px 24px;
   background:
-    radial-gradient(ellipse at 18% 18%, rgba(244, 201, 93, 0.2), transparent 32%),
-    radial-gradient(ellipse at 88% 78%, rgba(39, 110, 103, 0.1), transparent 34%),
-    #fffaf1;
+    radial-gradient(ellipse at 18% 18%, rgba(255, 216, 77, 0.24), transparent 32%),
+    radial-gradient(ellipse at 88% 78%, rgba(67, 89, 237, 0.12), transparent 34%),
+    #f4f6ff;
 }
 
 .auth-scene::before {
@@ -52,7 +52,7 @@ body.auth-route .site-footer {
   right: -60px;
   width: 300px;
   height: 300px;
-  border: 1px solid #eadfc8;
+  border: 1px solid #dfe4f2;
   border-radius: 50%;
   content: "";
   pointer-events: none;
@@ -87,20 +87,20 @@ body.auth-route .site-footer {
 
 .auth-note {
   margin: 0 0 2px;
-  color: #68675d;
+  color: #66708f;
   font-size: 14px;
   text-align: center;
 }
 
 .auth-back-link {
-  color: #276e67;
+  color: #4057ed;
   font-size: 13px;
   font-weight: 700;
   text-decoration: none;
 }
 
 .auth-back-link:hover {
-  color: #174e49;
+  color: #2939b6;
   text-decoration: underline;
   text-underline-offset: 3px;
 }
