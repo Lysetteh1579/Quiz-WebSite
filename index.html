@@ -41,35 +41,27 @@
       <section class="page" data-page="browse" aria-labelledby="welcome-title">
         <div class="hero">
           <div class="hero-copy">
-            <span class="hero-sticker"><span aria-hidden="true">✳</span> A small break for your brain</span>
-            <h1 class="display" id="welcome-title">A little quiz, <span class="scribble">just for fun.</span></h1>
-            <p class="hero-intro">Pick a topic, trust your first guess, and see what you know. Or make a quiz of your own and share the fun.</p>
+            <span class="hero-sticker">Pick a quiz and jump right in</span>
+            <h1 class="display" id="welcome-title">Lystte Quiz</h1>
+            <p class="hero-intro">Choose a topic, answer a few questions, and see how you do.</p>
+            <div class="hero-search">
+              <label class="visually-hidden" for="quiz-search">Search quizzes</label>
+              <input id="quiz-search" type="search" placeholder="Find a quiz…" autocomplete="off" />
+              <a class="hero-search-submit" href="#quiz-grid" aria-label="View matching quizzes"><span aria-hidden="true">→</span></a>
+            </div>
             <div class="hero-actions">
               <button class="button button-coral" type="button" data-action="surprise">Surprise me <span aria-hidden="true">↗</span></button>
-              <span class="quiz-count"><strong id="quiz-count">0</strong> little quizzes to try</span>
+              <span class="quiz-count"><strong id="quiz-count">0</strong> quizzes to play</span>
             </div>
-          </div>
-          <div class="hero-doodle" aria-hidden="true">
-            <div class="question-scrap">
-              <span>Quick question</span>
-              <strong>Ready, set,<br />curious!</strong>
-              <i></i>
-            </div>
-            <div class="circle-doodle"></div>
-            <div class="sun-doodle">?</div>
           </div>
         </div>
 
-        <section aria-labelledby="shelf-title">
+        <section id="quiz-shelf" aria-labelledby="shelf-title">
           <div class="shelf-heading">
             <div>
-              <p class="eyebrow coral-text">Pick your next little adventure</p>
-              <h2 class="display" id="shelf-title">The quiz shelf</h2>
+              <p class="eyebrow coral-text">Choose your next challenge</p>
+              <h2 class="display" id="shelf-title">Play a quiz</h2>
             </div>
-            <label class="search-field">
-              <span class="visually-hidden">Search quizzes</span>
-              <input id="quiz-search" type="search" placeholder="Find a topic…" autocomplete="off" />
-            </label>
           </div>
           <div class="category-list" aria-label="Filter quizzes" role="group"></div>
           <div class="quiz-grid" id="quiz-grid" aria-live="polite"></div>
